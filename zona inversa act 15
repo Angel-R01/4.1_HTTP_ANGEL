@@ -1,0 +1,24 @@
+;
+
+; BIND reverse data file for broadcast zone
+
+;
+
+$TTL    604800
+
+@       IN      SOA     angelrr-linux.angelrr.edu. root.angelrr.edu. (
+
+                                        1 360000 3600 3600000 36000)
+
+                                        IN NS angelrr-linux.angelrr.edu.
+
+10                                      IN PTR angelrr-linux.angelrr.edu.
+
+10                                      IN PTR otro.angelrr.edu.
+
+10                                      IN PTR virtual5.angelrr.edu.
+
+15                                      IN PTR virtual6.angelrr.edu.
+
+
+
