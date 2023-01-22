@@ -1,0 +1,65 @@
+<VirtualHost 192.168.13.10:5000>
+
+
+
+        ServerName virtual5.angelrr.edu
+
+        ServerAlias 192.168.13.10
+
+        DocumentRoot /var/www/html/virtual5/
+
+        DirectoryIndex index.html
+
+
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+
+</VirtualHost>
+
+------------------------------------
+<VirtualHost 192.168.13.15:5010>
+
+
+
+        ServerName virtual6.angelrr.edu
+
+        ServerAlias 192.168.13.15
+
+        DocumentRoot /var/www/html/virtual6/
+
+        DirectoryIndex index.html
+
+
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+
+</VirtualHost>
+
+
+
+---------------------------
+VirtualHost 192.168.13.10:5000 192.168.13.15:5010 *:*>
+
+
+
+        DocumentRoot /var/www/html/error/
+
+        DirectoryIndex index.html
+
+
+
+</VirtualHost>
+----------------------------
+# If you just change the port or add more ports here, you will likely also
+
+# have to change the VirtualHost statement in
+
+# /etc/apache2/sites-enabled/000-default.conf
