@@ -1,0 +1,33 @@
+; BIND data file for local loopback interface
+
+;
+
+$TTL    604800
+
+@       IN      SOA     angelrr.edu. root.angelrr.edu. (
+
+                                      1         ; Serial
+
+                                 604800         ; Refresh
+
+                                  86400         ; Retry
+
+                                2419200         ; Expire
+
+                                 604800         ; default ttl
+
+                                )
+
+                                IN      NS      angelrr-linux.angelrr.edu.
+
+angelrr-linux.angelrr.edu.      IN      A       192.168.13.10
+
+virtual5.angelrr.edu.           IN      A       192.168.13.10
+
+virtual6.angelrr.edu.           IN      A       192.168.13.10
+
+alias.angelrr.edu.              IN      A       192.168.13.10
+
+*.alias.angelrr.edu.            IN      A       192.168.13.10
+
+otro.angelrr.edu.               IN      CNAME   virtual5.angelrr.edu.
