@@ -1,0 +1,39 @@
+
+<VirtualHost *:4080>
+
+
+
+        ServerName alias.angelrr.edu
+
+        ServerAlias *.alias.angelrr.edu 
+
+        ServerAdmin webmaster@localhost
+
+        DocumentRoot /var/www/html/alias/
+
+        DirectoryIndex index.html
+
+
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+
+</VirtualHost>
+
+
+-----------------
+
+VirtualHost *:4080>
+
+
+
+        DocumentRoot /var/www/html/error/
+
+        DirectoryIndex index.html
+
+
+
+</VirtualHost>
