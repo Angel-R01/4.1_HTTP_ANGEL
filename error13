@@ -1,0 +1,12 @@
+
+<VirtualHost *:4080>
+
+
+
+        DocumentRoot /var/www/html/error/
+
+        DirectoryIndex index.html
+
+
+
+</VirtualHost>
