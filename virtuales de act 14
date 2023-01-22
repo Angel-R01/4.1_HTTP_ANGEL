@@ -1,0 +1,60 @@
+<VirtualHost 192.168.13.10:4080>
+
+
+
+        ServerName virtual3.angelrr.edu
+
+        ServerAlias 192.168.13.10      
+
+        DocumentRoot /var/www/html/virtual3/
+
+        DirectoryIndex index.html
+
+
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+
+</VirtualHost>
+
+
+
+-------------------------------------------------------------------------------
+
+<VirtualHost 192.168.13.15:4080>
+
+
+
+        ServerName virtual4.angelrr.edu
+
+        ServerAlias 192.168.13.15      
+
+        DocumentRoot /var/www/html/virtual4/
+
+        DirectoryIndex index.html
+
+
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+
+</VirtualHost>
+---------------------------------------------------------
+
+<VirtualHost 192.168.13.10:4080 192.168.13.15:4080 *:*>
+
+
+
+        DocumentRoot /var/www/html/error/
+
+        DirectoryIndex index.html
+
+
+
+</VirtualHost>
